@@ -3,3 +3,13 @@ docs/
 .env
 __pycache__/
 .vscode/
+
+*.pdf
+*.pptx
+
+data/
+*.db
+*.sqlite
+
+.venv/
+venv/
