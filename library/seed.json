@@ -1,0 +1,10 @@
+[
+    {"title": "Catan", "owner": "Jinin", "min_players": 3, "max_players": 4, "playtime_minutes": 90},
+    {"title": "Codenames", "owner": "Jinin", "min_players": 4, "max_players": 8, "playtime_minutes": 15},
+    {"title": "Ticket to Ride", "owner": "Sara", "min_players": 2, "max_players": 5, "playtime_minutes": 60},
+    {"title": "Azul", "owner": "Omar", "min_players": 2, "max_players": 4, "playtime_minutes": 45},
+    {"title": "Wingspan", "owner": "Sara", "min_players": 1, "max_players": 5, "playtime_minutes": 70},
+    {"title": "Exploding Kittens", "owner": "Omar", "min_players": 2, "max_players": 5, "playtime_minutes": 15},
+    {"title": "Pandemic", "owner": "Lina", "min_players": 2, "max_players": 4, "playtime_minutes": 45},
+    {"title": "Twilight Imperium", "owner": "Lina", "min_players": 3, "max_players": 6, "playtime_minutes": 480}
+]
