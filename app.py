@@ -1,10 +1,18 @@
 from flask import Flask, jsonify
 import config
+from library import repository
+from library.routes import library_blueprint
 
 
 def create_app() -> Flask:
     """build the Flask app and register its routes and error handlers"""
     app = Flask(__name__)
+
+    # create what is missing on every boot, but never drop or re-seed existing data
+    repository.create_tables()
+    repository.seed_games()
+
+    app.register_blueprint(library_blueprint)
 
     @app.get("/")
     def index():
