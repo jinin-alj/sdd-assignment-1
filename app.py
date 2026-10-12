@@ -1,6 +1,8 @@
 from flask import Flask, jsonify
 import config
-from library import repository
+from group import repository as group_repository
+from group.routes import group_blueprint
+from library import repository as library_repository
 from library.routes import library_blueprint
 
 
@@ -9,10 +11,12 @@ def create_app() -> Flask:
     app = Flask(__name__)
 
     # create what is missing on every boot, but never drop or re-seed existing data
-    repository.create_tables()
-    repository.seed_games()
+    library_repository.create_tables()
+    library_repository.seed_games()
+    group_repository.create_tables()
 
     app.register_blueprint(library_blueprint)
+    app.register_blueprint(group_blueprint)
 
     @app.get("/")
     def index():
